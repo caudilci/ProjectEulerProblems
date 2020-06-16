@@ -1,0 +1,14 @@
+{
+  "name": "projecteuler",
+  "version": "1.0.0",
+  "description": "Solutions and tests for problems on projecteuler.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
