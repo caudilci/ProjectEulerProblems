@@ -8,7 +8,6 @@ const { interfaces } = require("mocha");
 /**
  * Calculates the sum of all multiples of 3 and 5 up to the specified max
  * https://projecteuler.net/problem=1
- * @exports
  * @param {number} max - max number to iterate to
  * @returns {number} sum of all multiples of 3 and 5 below max
  */
@@ -25,7 +24,6 @@ exports.multOf3And5 = (max) => {
 /**
  * Sums even fibonnacci numbers that are under the specified max
  * https://projecteuler.net/problem=2
- * @exports
  * @param {number} max - max value to sum fibonacci numbers to
  */
 exports.evenFibNums = (max) => {
