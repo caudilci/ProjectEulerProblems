@@ -23,4 +23,19 @@ describe("Project Euler",function () {
             assert.equal(euler.evenFibNums(100), 44);
         });
     });
+
+    describe("largestPrimeFactor()", function () {
+        it("#n=10; Should evaluate to 7", function () {
+            assert.equal(euler.largestPrimeFactor(10), 5);
+        });
+        it("#n=50; Should evaluate to 5", function () {
+            assert.equal(euler.largestPrimeFactor(50), 5);
+        });
+        it("#n=13195; Should evaluate to 29", function () {
+            assert.equal(euler.largestPrimeFactor(13195), 29);
+        });
+        it("#n=25698751364526; Should evaluate to 328513", function () {
+            assert.equal(euler.largestPrimeFactor(25698751364526), 328513);
+        });
+    });
 });

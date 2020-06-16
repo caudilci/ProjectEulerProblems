@@ -2,6 +2,8 @@
  * @author Chris Caudill 
  */
 
+const { interfaces } = require("mocha");
+
 
 /**
  * Calculates the sum of all multiples of 3 and 5 up to the specified max
@@ -39,5 +41,21 @@ exports.evenFibNums = (max) => {
         curr = temp;
     }
     return sum;
+}
+
+/**
+ * Returns largest prime factor of input number n
+ * https://projecteuler.net/problem=3
+ * @param {number} n - number to find the largest prime factor of
+ */
+exports.largestPrimeFactor = (n) => {
+    let i;
+    for(i = 2; i <= n; i++){
+        if(n%i === 0){
+            n /= i;
+            i--;
+        }
+    }
+    return i;
 }
 
