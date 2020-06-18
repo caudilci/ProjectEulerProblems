@@ -38,4 +38,10 @@ describe("Project Euler",function () {
             assert.equal(euler.largestPrimeFactor(25698751364526), 328513);
         });
     });
+
+    describe("largestThreeDigitProductPalindrome()", function() {
+        it("#Should evaluate to 906609", function() {
+            assert.equal(euler.largestThreeDigitProductPalindrome(), 906609);
+        });
+    });
 });

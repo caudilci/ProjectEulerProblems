@@ -57,3 +57,20 @@ exports.largestPrimeFactor = (n) => {
     return i;
 }
 
+/**
+ * https://projecteuler.net/problem=4
+ * @returns {number} - Largest palindrome that is the product of two 3-digit numbers
+ */
+exports.largestThreeDigitProductPalindrome = () => {
+    largestPalindrome = 0;
+    for(let i = 100; i< 1000; i++){
+        for(let j= 100;j< 1000; j++){
+            let product = i*j;
+            let reverse = String(product).split("").reverse().join("");
+            if(product == reverse){
+                largestPalindrome = product>largestPalindrome ? product: largestPalindrome;
+            }
+        }
+    }
+    return largestPalindrome;
+}
