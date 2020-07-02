@@ -44,4 +44,19 @@ describe("Project Euler",function () {
             assert.equal(euler.largestThreeDigitProductPalindrome(), 906609);
         });
     });
+
+    describe("smallestMultiple()", function() {
+        it("#Should evaluate to 2520", function() {
+            assert.equal(euler.smallestMultiple(10), 2520);
+        });
+    });
+
+    describe("sumSquareDifference()", function() {
+        it("#Should evaluate to 2640", function() {
+            assert.equal(euler.sumSquareDifference(10), 2640);
+        });
+        it("#Should evaluate to 25164150", function() {
+            assert.equal(euler.sumSquareDifference(100), 25164150);
+        });
+    });
 });
