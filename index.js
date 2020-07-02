@@ -48,8 +48,8 @@ exports.evenFibNums = (max) => {
  */
 exports.largestPrimeFactor = (n) => {
     let i;
-    for(i = 2; i <= n; i++){
-        if(n%i === 0){
+    for (i = 2; i <= n; i++) {
+        if (n % i === 0) {
             n /= i;
             i--;
         }
@@ -63,14 +63,49 @@ exports.largestPrimeFactor = (n) => {
  */
 exports.largestThreeDigitProductPalindrome = () => {
     largestPalindrome = 0;
-    for(let i = 100; i< 1000; i++){
-        for(let j= 100;j< 1000; j++){
-            let product = i*j;
+    for (let i = 100; i < 1000; i++) {
+        for (let j = 100; j < 1000; j++) {
+            let product = i * j;
             let reverse = String(product).split("").reverse().join("");
-            if(product == reverse){
-                largestPalindrome = product>largestPalindrome ? product: largestPalindrome;
+            if (product == reverse) {
+                largestPalindrome = product > largestPalindrome ? product : largestPalindrome;
             }
         }
     }
+    console.log(largestPalindrome);
     return largestPalindrome;
+}
+
+
+exports.smallestMultiple = (n) => {
+    let increment = 2;
+    let step = 2;
+    let smallestMultiple = 2;
+    while (smallestMultiple <= Number.MAX_SAFE_INTEGER) {
+        for (let i = 2; i <= n; i++) {
+            const divisible = smallestMultiple % i === 0;
+            if (!divisible) {
+                break;
+            }
+            if (i === increment) {
+                step = smallestMultiple;
+                increment++;
+            }
+            if (i === n) {
+                return smallestMultiple;
+            }
+        }
+        smallestMultiple += step;
+    }
+}
+
+exports.sumSquareDifference = (n) => {
+    let sum1 = 0;
+    let sum2 = 0;
+    for(let i = 1; i<=n; i++){
+        sum1+=i;
+        sum2+=(i*i);
+    }
+    sum1*=sum1;
+    return sum1 - sum2;
 }
