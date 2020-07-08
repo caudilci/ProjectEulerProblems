@@ -2,8 +2,6 @@
  * @author Chris Caudill 
  */
 
-const { interfaces } = require("mocha");
-
 
 /**
  * Calculates the sum of all multiples of 3 and 5 up to the specified max
