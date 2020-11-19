@@ -59,4 +59,10 @@ describe("Project Euler",function () {
             assert.equal(euler.sumSquareDifference(100), 25164150);
         });
     });
+
+    describe("nthPrime()", function(){
+        it("#10001st Prime is 104743", function(){
+            assert.equal(euler.nthPrime(10001), 104743);
+        })
+    })
 });

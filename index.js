@@ -107,3 +107,35 @@ exports.sumSquareDifference = (n) => {
     sum1*=sum1;
     return sum1 - sum2;
 }
+
+/**
+ * https://projecteuler.net/problem=7
+ * made with code from https://helloacm.com/find-the-10001st-prime-number/
+ * plan on updating in the future
+ * @param {number} n 
+ */
+exports.nthPrime = (n) => {
+    let isPrime = (num) => {
+        if(num<=1) return false;
+        else if(num==2) return true;
+        else {
+            for(let i = 2; i*i <= num; i++){
+                if(num % i == 0) return false;
+            }
+            return true;
+        }
+    }
+
+    if (n == 1) return 2;
+    if (n == 2) return 3;
+    let prime = 3;
+    let i = 2;
+    while (i < n) {
+      do {
+          prime += 2;
+      } while (!isPrime(prime));
+      i ++;
+    }
+    return prime;
+
+}
